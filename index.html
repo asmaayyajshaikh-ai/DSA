@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DSA Learning Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-mark">DS</div>
+      <div><strong>DSA Learning Hub</strong><small>Learn • Visualize • Practice</small></div>
+    </div>
+    <div class="progress-mini">
+      <div class="progress-label"><span>Course Progress</span><b id="sideProgressText">0%</b></div>
+      <div class="progress-track"><div id="sideProgressBar"></div></div>
+    </div>
+    <nav id="navMenu"></nav>
+    <div class="sidebar-footer">Interactive Data Structures & Algorithms</div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn" id="menuToggle" aria-label="Toggle menu">☰</button>
+      <div class="top-title"><span id="pageEyebrow">Course Dashboard</span><h1 id="pageTitle">Data Structures & Algorithms</h1></div>
+      <div class="top-actions"><button class="ghost-btn" id="resetProgress">Reset Progress</button><button class="primary-btn" data-page="practice">Practice Now</button></div>
+    </header>
+    <section id="content"></section>
+  </main>
+</div>
+
+<template id="dashboard-template">
+  <div class="hero">
+    <div class="hero-copy">
+      <span class="pill">Interactive Course Portal</span>
+      <h2>Master Data Structures & Algorithms through concepts, diagrams, code and practice.</h2>
+      <p>Build strong problem-solving foundations with visual explanations, C programs, animated operations, topic-wise practice, lab exercises and progress tracking.</p>
+      <div class="hero-actions"><button class="primary-btn" data-page="intro">Start Learning</button><button class="ghost-btn" data-page="visualization">Open Visualization Lab</button></div>
+    </div>
+    <div class="hero-art">
+      <div class="orbit o1"><span>Array</span></div><div class="orbit o2"><span>Tree</span></div><div class="orbit o3"><span>Graph</span></div>
+      <div class="core">DSA</div>
+      <div class="node n1">Stack</div><div class="node n2">Queue</div><div class="node n3">List</div><div class="node n4">Sort</div>
+    </div>
+  </div>
+  <div class="stats-grid">
+    <article class="stat-card"><span>Learning Progress</span><strong id="dashProgress">0%</strong><small>Overall course completion</small></article>
+    <article class="stat-card"><span>Topics Completed</span><strong id="topicsDone">0 / 16</strong><small>Mark topics complete as you learn</small></article>
+    <article class="stat-card"><span>Practice Questions</span><strong>60+</strong><small>MCQ, T/F, output & coding</small></article>
+    <article class="stat-card"><span>Student Reviews</span><strong id="reviewCount">3</strong><small>Feedback from learners</small></article>
+  </div>
+  <div class="visitor-card"><div><small>Course Visitors</small><strong id="visitorCount">0</strong><small id="visitorNote">Students who have opened this course</small></div><div class="visitor-badge">👥</div></div>
+  <div class="section-head"><div><span>Learning Roadmap</span><h3>Core DSA journey</h3></div><button class="ghost-btn" data-page="cheatsheet">Open Cheat Sheet</button></div>
+  <div class="roadmap" id="roadmap"></div>
+  <div class="two-col">
+    <article class="panel"><h3>Why learn DSA?</h3><p>DSA helps you organize data efficiently, design faster solutions, improve coding logic, and select the right approach for real-world software problems.</p><div class="tag-row"><span>Problem Solving</span><span>Optimization</span><span>Interviews</span><span>Software Design</span></div></article>
+    <article class="panel"><h3>Student Reviews</h3><div id="dashboardReviews"></div></article>
+  </div>
+</template>
+
+<script src="script.js"></script>
+</body>
+</html>
